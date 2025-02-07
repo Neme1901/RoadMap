@@ -1,0 +1,150 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.collapsed {
+    display: none;
+}
+
+nav {
+    background-color: #333333;
+    color: white;
+    width: 100%;
+}
+
+nav .mobile {
+    display: none;
+}
+
+nav .mobile .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+}
+
+nav .mobile .header .more button {
+    background-color: #333333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+nav .logo {
+    min-width: 250px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+}
+
+nav a:hover {
+    color: #f0f0f0;
+    background-color: #42cff3;
+}
+
+nav .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pad: 0 20px;
+}
+
+nav .desktop .primary,
+nav .desktop .secondary {
+    display: flex;
+}
+
+nav .desktop .secondary.mini {
+    display: none;
+}
+
+@media screen and (max-width: 853px) {
+
+    nav .logo {
+        min-width: 100px;
+    }
+
+    nav .secondary.full {
+        display: none;
+    }
+
+    nav .secondary.mini {
+        display: block !important;
+    }
+
+    nav .secondary.mini .submenu {
+        background-color: #333333;
+        position: absolute;
+        display: none;
+        width: 150px;
+        right: 0;
+    }
+
+    nav .secondary.mini:hover .submenu {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    nav .desktop {
+        display: none;
+    }
+
+    nav .mobile {
+        display: block;
+    }
+
+    nav .mobile .menu {
+        display: none;
+    }
+
+    nav .mobile .menu.active {
+        display: block;
+    }
+
+    nav .mobile .menu.active a {
+        display: block;
+        padding: 10px 25px;
+    }
+
+    nav .mobile .menu.active a:hover {
+        background-color: #42cff3;
+    }
+
+    nav .mobile .menu.active .submenu {
+        display: block;
+        background-color: #333333;
+        padding: 0;
+    }
+
+    nav .mobile .menu.active .submenu a {
+        padding: 10px 25px;
+    }
+
+}
